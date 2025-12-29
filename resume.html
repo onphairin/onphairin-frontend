@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume - Onphairin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ให้ body ครอบเต็มหน้าจอ และใช้ Flexbox จัดกลาง */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* จัดแนวตั้งกลาง */
+      align-items: center;     /* จัดแนวนอนกลาง */
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    main img {
+      max-width: 90vw;  /* ขยายไม่เกินความกว้างหน้าจอ */
+      max-height: 90vh; /* ขยายไม่เกินความสูงหน้าจอ */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #5a3e36;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #7c5b52;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- ลิงก์กลับไปหน้า Home -->
+    <a href="index.html" class="btn">Back</a>
+  </header>
+  <main>
+    <img src="images/Resume.png" alt="Resume">
+  </main>
+</body>
+</html>
