@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onphairin | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+<header class="hero">
+  <img src="images/Profile Photo.jpg" alt="Onphairin" class="hero-photo">
+  <h1>Hi, I'm <span>Onphairin</span></h1>
+  <p>Frontend Developer</p>
+  <div class="btn-group">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#" class="btn-detail" id="resumeBtn">View Resume</a>
+  </div>
+</header>
+
+<!-- Lightbox สำหรับ Resume -->
+<div class="lightbox" id="resumeLightbox" style="
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+">
+  <!-- ปุ่มปิดเดียว -->
+  <span class="close-btn" id="resumeClose" style="
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10;
+  ">&times;</span>
+
+  <img src="images/resume.png" alt="Resume" style="
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  ">
+</div>
+
+  <!-- About Me -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      ฉันชื่อ อรไพลิน จันดี ชื่อเล่น ฟิ้งค์
+      ฉันเป็นนักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์  
+      ฉันมีความสนใจในการพัฒนา เว็บแอปพลิเคชันในฝั่ง Frontend 
+      โดยมุ่งเน้นการออกแบบและพัฒนาส่วนติดต่อผู้ใช้ (User Interface)
+       และประสบการณ์ผู้ใช้ (User Experience) ให้ใช้งานง่าย สวยงาม และตอบโจทย์ผู้ใช้งานจริง 
+       จากการเรียนและการทำโปรเจกต์ที่ผ่านมา ดิฉันได้ฝึกการพัฒนา Frontend ด้วยการเขียนโค้ด 
+       จัดการโครงสร้างหน้าเว็บ การเชื่อมต่อกับ API และทำงานร่วมกับฝั่ง Back-end 
+       เพื่อให้ระบบสามารถทำงานได้อย่างสมบูรณ์ ดิฉันให้ความสำคัญกับการทำงานเป็นทีม 
+       สามารถรับฟังความคิดเห็น แลกเปลี่ยนไอเดีย และปรับปรุงงานตามข้อเสนอแนะได้อย่างเหมาะสม 
+       รวมถึงมีความพร้อมในการเรียนรู้เทคโนโลยีหรือเครื่องมือใหม่ ๆ ที่เกี่ยวข้องกับงานด้าน Frontend 
+       เพื่อพัฒนาทักษะและคุณภาพของผลงานอย่างต่อเนื่อง
+    </p>
+  </section>
+<section class="skills">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <span class="skill-name">Java</span>
+      <div class="skill-tooltip">
+        <img src="images/java.png" alt="Java Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Python</span>
+      <div class="skill-tooltip">
+        <img src="images/python.png" alt="Python Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Node.js</span>
+      <div class="skill-tooltip">
+        <img src="images/nodejs.png" alt="Node.js Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">HTML</span>
+      <div class="skill-tooltip">
+        <img src="images/HTML5.png" alt="HTML Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">CSS</span>
+      <div class="skill-tooltip">
+        <img src="images/CSS3-Logo.jpg.webp" alt="CSS Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">JavaScript</span>
+      <div class="skill-tooltip">
+        <img src="images/JavaScript.png" alt="JavaScript Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">React</span>
+      <div class="skill-tooltip">
+        <img src="images/React.png" alt="React Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Flutter</span>
+      <div class="skill-tooltip">
+        <img src="images/Flutter.png" alt="Flutter Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Next.js</span>
+      <div class="skill-tooltip">
+        <img src="images/next-js.png" alt="Next.js Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">GitHub</span>
+      <div class="skill-tooltip">
+        <img src="images/GitHub.png" alt="GitHub Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Figma</span>
+      <div class="skill-tooltip">
+        <img src="images/Figma.png" alt="Figma Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Canva</span>
+      <div class="skill-tooltip">
+        <img src="images/Canva.png" alt="Canva Logo">
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-name">Vercel</span>
+      <div class="skill-tooltip">
+        <img src="images/vercel.png" alt="Vercel Logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+  <div class="project-card">
+  <div class="slider">
+    <img src="images/Review Cafe.png" class="active" alt="Review Cafe">
+    <img src="images/Review Cafe1.png" alt="Review Cafe 1">
+    <img src="images/Review Cafe2.png" alt="Review Cafe 2">
+  </div>
+  <h3>Review Cafe Web</h3>
+  <a class="btn-detail" href="cafe-project.html">View Project</a>
+</div>
+
+
+  <div class="project-card">
+  <div class="slider">
+    <img src="images/Mathes App.png" class="active" alt="Mathes App">
+    <img src="images/Mathes1.png" alt="Mathes App 1">
+    <img src="images/Mathes2.png" alt="Mathes App 2">
+    <img src="images/Mathes3.png" alt="Mathes App 3">
+    <img src="images/Mathes4.png" alt="Mathes App 4">
+    <img src="images/Mathes5.png" alt="Mathes App 5">
+    <img src="images/Mathes6.png" alt="Mathes App 6">
+  </div>
+  <h3>Mathes App</h3>
+  <a class="btn-detail" href="Mathes App.html">View Project</a>
+</div>
+
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/Bike Rental.png" class="active" alt="Bike Rental Web">
+    <img src="images/Bike Rental2.png" alt="Bike Rental 2">
+    <img src="images/Bike Rental3.png" alt="Bike Rental 3">
+  </div>
+  <h3>Bike Rental Web</h3>
+  <a class="btn-detail" href="Bike Rental.html">View Project</a>
+</div>
+
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/SmartWatering System.png" class="active" alt="SmartWatering System">
+    <img src="images/SWS1.png" alt="SmartWatering System 1">
+    <img src="images/SWS2.png" alt="SmartWatering System 2">
+  </div>
+  <h3>SmartWatering System</h3>
+  <a class="btn-detail" href="SmartWatering System.html">View Project</a>
+</div>
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/AI Model for Gemstone.jpg" class="active" alt="AI Model for Gemstone">
+    <img src="images/AI Model1.png" alt="AI Model 1">
+    <img src="images/AI Model2.png" alt="AI Model 2">
+    <img src="images/AI Model3.png" alt="AI Model 3">
+  </div>
+  <h3>AI Model for Gemstone</h3>
+  <a class="btn-detail" href="AI Model.html">View Project</a>
+</div>
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/AI-AIM.png" class="active" alt="AI-AIM">
+  </div>
+  <h3>AI-AIM</h3>
+  <a class="btn-detail" href="AI AIM.html">View Project</a>
+</div>
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/OOP.png" class="active" alt="Delivery Package Shop System">
+  </div>
+  <h3>Delivery Package Shop System</h3>
+  <a class="btn-detail" href="Delivery.html">View Project</a>
+</div>
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/FINKCONVERTER.png" class="active" alt="FINKCONVERTER">
+  </div>
+  <h3>FINKCONVERTER</h3>
+  <a class="btn-detail" href="FINKCONVERTER.html">View Project</a>
+</div>
+
+<div class="project-card">
+  <div class="slider">
+    <img src="images/DentalClinic.png" class="active" alt="Dental Clinic">
+  </div>
+  <h3>Dental Clinic</h3>
+  <a class="btn-detail" href="Dental Clinic.html">View Project</a>
+</div>
+</section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: finkopr2546@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/onphairin" target="_blank">onphairin</a></p>
+    <p>LineID: fink.opr</p>
+    <p>Phone: 088-272-6806</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Onphairin Chandee | Frontend Developer
+  </footer>
+
+  <!-- Resume Modal Fullscreen -->
+<div class="modal" id="resumeModal">
+  <div class="modal-content fullscreen">
+    <span class="close" id="closeResume">&times;</span>
+    <iframe src="resume.pdf" id="resumeFrame"></iframe>
+  </div>
+</div>
+
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProject()">&times;</span>
+      <h2 id="projectTitle"></h2>
+      <p id="projectDesc"></p>
+      <ul id="projectTech"></ul>
+      <a id="projectLink" href="#" target="_blank" class="btn-detail">View on GitHub</a>
+    </div>
+  </div>
+
+ <script>
+const sliders = document.querySelectorAll('.slider');
+const resumeBtn = document.getElementById('resumeBtn');
+const resumeLightbox = document.getElementById('resumeLightbox');
+const resumeClose = document.getElementById('resumeClose');
+
+sliders.forEach(slider => {
+  const images = slider.querySelectorAll('img');
+  let index = 0;
+
+   // ตั้ง interval ให้เปลี่ยนภาพทุก 3 วินาที
+  setInterval(() => {
+    images.forEach(img => img.classList.remove('active')); // ซ่อนทุกภาพ
+    index = (index + 1) % images.length;                  // ไปภาพถัดไป
+    images[index].classList.add('active');               // แสดงภาพใหม่
+  }, 3000);
+
+// เปิด Lightbox Resume
+resumeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  resumeLightbox.style.display = 'flex';
+});
+
+// ปิด Lightbox ด้วยปุ่ม ×
+resumeClose.addEventListener('click', () => {
+  resumeLightbox.style.display = 'none';
+});
+
+// คลิกนอกรูปก็ปิด Lightbox
+resumeLightbox.addEventListener('click', (e) => {
+  if(e.target === resumeLightbox){
+    resumeLightbox.style.display = 'none';
+  }
+  });
+});
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Review Cafe Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9fafb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header.hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff3e0;
+    }
+
+    .project-top-img {
+      max-width: 300px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header.hero img.hero-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header.hero p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    /* Technology Section */
+    .tech-section {
+      background: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .tech-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tech-card {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .tech-card h4 {
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .btn-detail {
+      display: inline-block;
+      background: #ff6f61;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-detail:hover {
+      background: #ff3b2f;
+    }
+
+    /* Project Images Section */
+    .project-images {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .project-images h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .images-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .images-grid img {
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .images-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .lightbox .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="images/Review Cafe.png" alt="Review Cafe Main" class="project-top-img">
+    <h1>Review Cafe Web</h1>
+    <p>เป็นเว็บไซต์ที่รวบรวมรีวิวร้านกาแฟจากผู้ใช้ โดยผู้ใช้สามารถเข้าชมรีวิวร้านกาแฟที่ชื่นชอบได้ 
+      ในเว็บไซต์นี้ผู้เข้าชมสามารถดูพิกัดร้านกาแฟได้จาก Google Maps และเวลาเปิด-ปิดของร้านกาแฟนั้นๆได้ 
+      นอกจากนี้ยังสามารถดูรีวิวจากผู้ใช้คนอื่นๆ ได้อีกด้วย</p>
+  </header>
+
+  <section class="tech-section">
+    <div class="tech-cards">
+      <div class="tech-card">
+        <h4>Programming Languages</h4>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="tech-card">
+        <h4>Tools & Technologies</h4>
+        <p>React, REST API, Google Maps API</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-images">
+    <h2>Screenshots</h2>
+    <div class="images-grid">
+      <img src="images/Review Cafe1.png" alt="Review Cafe 1" class="zoom-img">
+      <img src="images/Review Cafe2.png" alt="Review Cafe 2" class="zoom-img">
+    </div>
+  </section>
+
+  <div class="btn-container">
+    <a href="index.html#projects" class="btn-detail">View Projects</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img src="" alt="Expanded Screenshot" id="lightboxImg">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    const images = document.querySelectorAll('.zoom-img');
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    // คลิกนอกรูปก็ปิด lightbox
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
